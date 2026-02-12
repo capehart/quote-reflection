@@ -1,0 +1,27 @@
+baseURL = 'https://wisdom.accapehart.com/'
+languageCode = 'en-us'
+title = 'My New Wisdom Site'
+theme = "github-style"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+  author = "AC Capehart"
+  description = "Seeking Wisdom across the ages"
+  github = "capehart"
+  twitter = "capehart"
+  linkedin = "accapehart"
+  email = "wisdom@accapehart.com"
+  url = "https://wisdom.accapehart.com"
+  keywords = "quotes, reflections"
+  rss = true
+  lastmod = true
+  userStatusEmoji = "😀"
+  favicon = "/images/github.png"
+  avatar = "/images/avatar.png"
+  headerIcon = "/images/GitHub-Mark-Light-32px.png"
+  location = "Virginia, USA"
+  enableGitalk = false
+  custom_css = ["css/custom.css"]
+  custom_js = ["js/custom.js"]
+
