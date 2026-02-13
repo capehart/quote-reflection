@@ -2,7 +2,7 @@
 date = '{{ .Date }}'
 draft = true
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
-quote = ''
+quote = ""
 attribution = ''
 attribution_confidence = ''
 link = ''
