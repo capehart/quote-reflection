@@ -76,6 +76,21 @@
                 <div class="Box-body px-5 pb-5" style="z-index: 1">
                   <article class="markdown-body entry-content container-lg">
                     {{ with .Params.quote }}
+                    {{ if $.Params.image }}
+                    <div style="position: relative; margin: 1em 0; border-radius: 4px; overflow: hidden;">
+                      <img src="{{ $.Params.image }}" alt=""
+                           style="width: 100%; height: auto; display: block; filter: brightness(1.08) saturate(0.7);">
+                      <div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 1.5em;">
+                        <blockquote style="font-size: 1.5em; font-weight: 600; line-height: 1.4; border-left: 5px solid #0366d6; padding: 0.75em 1.25em; margin: 0; background: rgba(255,255,255,0.92); border-radius: 3px; max-width: 85%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                          <p style="margin: 0;">{{ . }}</p>
+                        </blockquote>
+                        <p style="margin: 0.5em 0 0; padding: 0.4em 1em; background: rgba(255,255,255,0.92); border-radius: 3px; color: #586069; font-weight: 500;">
+                          &mdash;
+                          {{ with $.Params.link }}<a href="{{ . }}">{{ $.Params.attribution }}</a>{{ else }}{{ $.Params.attribution }}{{ end }}
+                        </p>
+                      </div>
+                    </div>
+                    {{ else }}
                     <blockquote style="font-size: 1.25em; border-left: 4px solid #0366d6; padding: 0.5em 1em; margin: 1em 0; background: #f6f8fa;">
                       <p>{{ . }}</p>
                     </blockquote>
@@ -83,6 +98,7 @@
                       &mdash;
                       {{ with $.Params.link }}<a href="{{ . }}">{{ $.Params.attribution }}</a>{{ else }}{{ $.Params.attribution }}{{ end }}
                     </p>
+                    {{ end }}
                     {{ end }}
 
                     {{ if .Content }}

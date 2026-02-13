@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+# Pre-commit hook: generate watercolor images for new/modified quote files.
+# Install: cp scripts/pre-commit .git/hooks/pre-commit
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+GENERATE_SCRIPT="$PROJECT_ROOT/scripts/generate-quote-images.py"
+
+# Find staged quote .md files (Added, Copied, Modified), excluding _index.md
+STAGED_QUOTES=$(git diff --cached --name-only --diff-filter=ACM -- 'content/quotes/*.md' | grep -v '_index\.md' || true)
+
+if [ -z "$STAGED_QUOTES" ]; then
+    exit 0
+fi
+
+# Check that the generation script exists
+if [ ! -f "$GENERATE_SCRIPT" ]; then
+    echo "pre-commit: generate-quote-images.py not found, skipping image generation."
+    exit 0
+fi
+
+# Build the list of full paths
+FILES=()
+for f in $STAGED_QUOTES; do
+    FILES+=("$PROJECT_ROOT/$f")
+done
+
+# Try uv first, fall back to python3
+if command -v uv &>/dev/null; then
+    echo "pre-commit: Generating images for ${#FILES[@]} quote(s) via uv..."
+    uv run "$GENERATE_SCRIPT" "${FILES[@]}"
+elif command -v python3 &>/dev/null; then
+    echo "pre-commit: Generating images for ${#FILES[@]} quote(s) via python3..."
+    python3 "$GENERATE_SCRIPT" "${FILES[@]}"
+else
+    echo "pre-commit: Neither uv nor python3 found, skipping image generation."
+    echo "pre-commit: Install uv (https://docs.astral.sh/uv/) or ensure python3 + requests are available."
+    exit 0
+fi
+
+# Stage any generated/updated files
+for f in $STAGED_QUOTES; do
+    git add "$f"
+done
+
+# Stage any new images
+if [ -d "$PROJECT_ROOT/static/images/quotes" ]; then
+    git add "$PROJECT_ROOT/static/images/quotes/"*.png 2>/dev/null || true
+fi
+
+exit 0

@@ -6,5 +6,6 @@ quote = ""
 attribution = ''
 attribution_confidence = ''
 link = ''
+image = ''
 tags = []
 +++

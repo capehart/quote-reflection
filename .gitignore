@@ -68,3 +68,19 @@ bower_components
 .aws-credentials.json
 .awspublish*
 
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# uv
+.python-version
+
