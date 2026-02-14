@@ -119,15 +119,16 @@ def truncate_at_word(text: str, max_chars: int = 300) -> str:
 def build_prompt(quote: str, attribution: str, body: str) -> str:
     """Build the image generation prompt from quote metadata.
 
-    Deliberately excludes the raw quote text to prevent Flux from rendering
-    it as calligraphy/typography in the image. Uses only the reflection body
-    for thematic context.
+    Includes the quote as thematic context (not formatted as a typographical
+    quote, which triggers Flux to render it as calligraphy). Includes a longer
+    body excerpt to provide concrete visual cues.
     """
-    body_excerpt = truncate_at_word(body.strip(), max_chars=200)
+    body_excerpt = truncate_at_word(body.strip(), max_chars=400)
     return (
-        f"Abstract watercolor landscape painting. "
-        f"The scene evokes the emotional mood of a philosophical reflection by {attribution}. "
-        f"Thematic context: {body_excerpt}\n\n"
+        f"Watercolor painting capturing the mood and visual essence of these ideas: "
+        f"{quote}\n\n"
+        f"Imagery from the author's reflection: {body_excerpt}\n\n"
+        f"Cultural context: the philosophy of {attribution}.\n\n"
         f"{STYLE_CONSTRAINTS}"
     )
 
