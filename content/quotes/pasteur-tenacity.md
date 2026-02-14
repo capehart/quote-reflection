@@ -1,12 +1,12 @@
 +++
-date = '2026-02-13T22:30:55-05:00'
-draft = true
+date = '2026-02-11T22:30:55-05:00'
+draft = false
 title = 'Pasteur Tenacity'
 quote = "Let me tell you the secret that has led to my goal. My strength lies only in my tenacity."
 attribution = 'Louis Pasteur'
 attribution_confidence = 'uncertain'
 link = ''
-image = ''
+image = '/images/quotes/pasteur-tenacity.png'
 tags = ['determination', 'consistency']
 +++
 This is also reminiscent of the Edison quote:

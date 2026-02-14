@@ -6,7 +6,7 @@ quote = "Execution pays your salary; innovation pays your pension."
 attribution = 'Steve Blank'
 attribution_confidence = 'uncertain'
 link = ''
-image = ''
+image = '/images/quotes/blank-execution-vs-innovation.png'
 tags = ['work', 'creativity']
 +++
 Yeah, I don't know how much I have to add to this one. Though there's a related Jim Rohn quote that I like:

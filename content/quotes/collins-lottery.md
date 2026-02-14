@@ -6,7 +6,7 @@ quote = "If you do meaningful work you enjoy with people you love, you've truly 
 attribution = 'Jim Collins'
 attribution_confidence = 'uncertain'
 link = ''
-image = ''
+image = '/images/quotes/collins-lottery.png'
 tags = ['work', 'joy']
 +++
 I didn't reflect on this at the time. I was enjoying the warm and joyful company of family.

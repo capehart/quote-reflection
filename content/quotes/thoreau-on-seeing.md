@@ -6,7 +6,7 @@ quote = "The question is not what you look at, but what you see."
 attribution = 'Henry David Thoreau'
 attribution_confidence = 'high'
 link = 'https://www.walden.org/what-we-do/library/thoreau/mis-quotations/'
-image = ''
+image = '/images/quotes/thoreau-on-seeing.png'
 tags = ['attention']
 +++
 I know that I fall frequently into the trap of believing that I see "reality". When really, I get a variety of electric signals to my brain which then interprets them. It usually seems like a distinction without significance, but it's part of why I always want to know how magic tricks are performed. I need the map to make sense.
