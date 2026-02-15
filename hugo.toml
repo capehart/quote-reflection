@@ -1,13 +1,13 @@
 baseURL = 'https://reflections.accapehart.com/'
 languageCode = 'en-us'
-title = 'My New Wisdom Site'
+title = 'Reflections on Quotes'
 theme = "github-style"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
 [params]
   author = "AC Capehart"
-  description = "Seeking Wisdom across the ages"
+  description = "These quotes have been meaningful to me, so I'm delighed to share them and my reflections on them with you."
   github = "capehart"
   twitter = "capehart"
   linkedin = "accapehart"
