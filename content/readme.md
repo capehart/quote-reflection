@@ -2,7 +2,7 @@
 date = '2026-02-11T22:09:30-05:00'
 draft = false
 title = 'Readme'
-pin = true
+pin = false
 +++
 Hi. I'm [AC Capehart](https://accapehart.com/). I work for a small home performance company called [Pearl](https://pearlscore.com/). As I progress through life, I notice things that resonate with me, and try to capture them for reflection. Originally, I created these for colleagues and they were kind of slap-dash. The writing clearly needed to improve. I intend to continue posting these weekly and be at least a little more careful in the reflection prose.
 
