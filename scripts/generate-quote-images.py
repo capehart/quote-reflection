@@ -168,7 +168,7 @@ def build_workflow(prompt_text: str, cfg: dict) -> dict:
         "5": {
             "class_type": "CLIPTextEncode",
             "inputs": {
-                "text": "text, words, letters, numbers, script, quote, citation, writing, calligraphy, typography, caption, label, signature, watermark",
+                "text": "text, words, letters, numbers, script, quote, citation, writing, calligraphy, typography, caption, label, signature, artist signature, painted signature, handwritten signature, initials, watermark",
                 "clip": ["2", 0],
             },
         },
@@ -189,7 +189,7 @@ def build_workflow(prompt_text: str, cfg: dict) -> dict:
                 "latent_image": ["6", 0],
                 "seed": seed,
                 "steps": 20,
-                "cfg": 1.0,
+                "cfg": 3.5,
                 "sampler_name": "euler",
                 "scheduler": "simple",
                 "denoise": 1.0,

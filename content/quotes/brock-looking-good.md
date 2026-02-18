@@ -24,5 +24,5 @@ Back in [November](<{{ ref quotes/eisenhower-on-planning/ }}>) I referenced [The
 
 All of which is to say, it's OK to struggle. It's necessary. No one doesn't struggle.
 
-A dear family friend would often say, "Choose your hard". "Looking bad" is hard. But not growing, or being beten by someone who is willing to look bad is hard too. You don't get to choose "easy", but you _do_ get to choose your hard.
+A dear family friend would often say, "Choose your hard". "Looking bad" is hard. But not growing is hard. Being beaten by someone who _is_ willing to look bad is hard too. You don't get to choose "easy", but you _do_ get to choose your hard.
 
