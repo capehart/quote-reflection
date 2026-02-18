@@ -6,7 +6,7 @@ quote = "Show me a person who's afraid to look bad, and I'll show you a person y
 attribution = 'Lou Brock'
 attribution_confidence = 'uncertain'
 link = 'https://www.brainyquote.com/quotes/lou_brock_131377'
-image = ''
+image = '/images/quotes/brock-looking-good.png'
 tags = []
 +++
 I was thinking about this quote in the gym this morning. As I watched people struggle to get that last rep in, I though "it's not pretty".
